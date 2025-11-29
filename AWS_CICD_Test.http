@@ -1,0 +1,6 @@
+@AWS_CICD_Test_HostAddress = http://localhost:5085
+
+GET {{AWS_CICD_Test_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

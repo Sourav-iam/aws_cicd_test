@@ -1,0 +1,24 @@
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.5.2.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AWS_CICD_Test", "AWS_CICD_Test.csproj", "{972F37EC-C2C3-6DDA-7275-993CE61ABE8B}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{972F37EC-C2C3-6DDA-7275-993CE61ABE8B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{972F37EC-C2C3-6DDA-7275-993CE61ABE8B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{972F37EC-C2C3-6DDA-7275-993CE61ABE8B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{972F37EC-C2C3-6DDA-7275-993CE61ABE8B}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {A35F44A8-4862-4F70-B570-DC6E382259C5}
+	EndGlobalSection
+EndGlobal
