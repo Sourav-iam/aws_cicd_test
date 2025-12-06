@@ -10,7 +10,7 @@ echo "Starting ApplicationStop hook: checking for running containers..."
 
 # Find all running container IDs
 RUNNING_CONTAINERS=$(docker ps -q)
-
+echo $RUNNING_CONTAINERS
 if [ -n "$RUNNING_CONTAINERS" ]; then
   echo "Found running containers. Attempting to stop them gracefully..."
   
