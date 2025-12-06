@@ -1,0 +1,24 @@
+version: 0.2
+
+# env:
+#   parameter-store:
+
+phases:
+  install:
+    runtime-versions:
+      dotnet: 8.0
+  pre_build:
+    commands:
+      - echo "Logging in to Docker Hub...."
+      - export DOCKER_USER=$(aws secretsmanager get-secret-value --secret-id test/docker_credentials --query SecretString --output text | jq -r .username)
+      - export DOCKER_PASS=$(aws secretsmanager get-secret-value --secret-id test/docker_credentials --query SecretString --output text | jq -r .password)
+      - export REPO_NAME=$(aws secretsmanager get-secret-value --secret-id test/docker_credentials --query SecretString --output text | jq -r .reponame)
+      - docker login -u $DOCKER_USER -p $DOCKER_PASS
+  build:
+    commands:
+      - echo "Building the Docker image..."
+      - export REPO_URL="$DOCKER_USER/$REPO_NAME"
+      - echo $REPO_URL
+      - export IMAGE_TAG="docker.io/$DOCKER_USER/simple_dotnetwebapi:latest"
+      - docker build -t $IMAGE_TAG .
+      - docker push $IMAGE_TAG
