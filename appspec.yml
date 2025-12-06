@@ -3,7 +3,6 @@ os: linux
 # files:
 #   - source: /
 #     destination: /var/www/html/
-
 hooks:
   ApplicationStop:
     - location: scripts/stop_server.sh
